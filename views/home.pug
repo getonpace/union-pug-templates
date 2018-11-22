@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  //- Logo File
+  //- img(src='./img/union-mark.png')
+  p.lead An Innovation Hub
+  p Fostering Community, Commerce, Creativity & Culture in the Seattle metropolitan area.
+  hr
+  .row
+    //- Conditional code that will display blog data when available
+    for blog in blogs
+      .col-md-4
+        h2 #{blog.title}
+        p #{blog.summary}
+        p 
+          small Written By: #{blog.author.first_name} #{blog.author.last_name}
+        a.btn.btn-raised(href='#', role='button') View details »
