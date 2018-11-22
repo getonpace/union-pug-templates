@@ -7832,6 +7832,10 @@ a.text-dark:hover, a.text-dark:focus {
   .titlebox--notop:before {
     display: none; }
 
+.btn:focus {
+  outline: none;
+  box-shadow: none; }
+
 .btn-slg {
   padding: 1rem 3rem;
   border: 2px solid white;
@@ -7867,6 +7871,32 @@ a.text-dark:hover, a.text-dark:focus {
     .show > .btn-gray.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(118, 118, 118, 0.5); }
   .btn-gray:hover, .btn-gray:focus {
+    border-color: white; }
+
+.btn-blue {
+  color: #fff;
+  background-color: #004eff;
+  border-color: #004eff;
+  border-color: white; }
+  .btn-blue:hover {
+    color: #fff;
+    background-color: #0042d9;
+    border-color: #003ecc; }
+  .btn-blue:focus, .btn-blue.focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 78, 255, 0.5); }
+  .btn-blue.disabled, .btn-blue:disabled {
+    color: #fff;
+    background-color: #004eff;
+    border-color: #004eff; }
+  .btn-blue:not(:disabled):not(.disabled):active, .btn-blue:not(:disabled):not(.disabled).active,
+  .show > .btn-blue.dropdown-toggle {
+    color: #fff;
+    background-color: #003ecc;
+    border-color: #003bbf; }
+    .btn-blue:not(:disabled):not(.disabled):active:focus, .btn-blue:not(:disabled):not(.disabled).active:focus,
+    .show > .btn-blue.dropdown-toggle:focus {
+      box-shadow: 0 0 0 0.2rem rgba(0, 78, 255, 0.5); }
+  .btn-blue:hover, .btn-blue:focus {
     border-color: white; }
 
 .btn-darkgray {
@@ -7927,6 +7957,10 @@ a.text-dark:hover, a.text-dark:focus {
   background-color: transparent; }
   .btn-transparent:hover, .btn-transparent:focus {
     border-color: black; }
+
+.btn-capsule {
+  border-radius: 25px;
+  padding: .25rem 1.5rem; }
 
 .about {
   padding: 70px 0; }
@@ -8220,7 +8254,19 @@ a.text-dark:hover, a.text-dark:focus {
       cursor: pointer; }
 
 .twitter-feed {
-  background-color: black; }
+  background-color: black;
+  padding: 70px 0;
+  text-align: center;
+  color: white;
+  font-size: 1.45rem;
+  font-weight: 300; }
+  .twitter-feed i {
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem; }
+  .twitter-feed-username {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem; }
 
 .testimonials {
   padding: 70px 0;
