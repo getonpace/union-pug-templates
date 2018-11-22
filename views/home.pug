@@ -182,4 +182,11 @@ block content
             p Launching a tech startup is definitely not easy. Join our mailing list to stay up to date on our meetups, workshops, and tech talks #poweredbyPACE
             p.twitter-feed-username @theunionsea
             button.btn.btn-blue.btn-capsule.btn-sm Follow
-
+    section.featured
+        .container-fluid
+            h3.featured-title Featured On
+            ul.featured-list
+                - var images = ['blavity', 'king-5', 'seattle-met', 'geekwire', 'city-arts', 'rolling-out']
+                each image in images
+                    li.featured-item
+                        img(src="/img/" + image + "@2x.png", alt="")
