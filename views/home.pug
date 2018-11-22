@@ -1,17 +1,161 @@
 extends layout
 
 block content
-  //- Logo File
-  //- img(src='./img/union-mark.png')
-  p.lead An Innovation Hub
-  p Fostering Community, Commerce, Creativity & Culture in the Seattle metropolitan area.
-  hr
-  .row
-    //- Conditional code that will display blog data when available
-    for blog in blogs
-      .col-md-4
-        h2 #{blog.title}
-        p #{blog.summary}
-        p 
-          small Written By: #{blog.author.first_name} #{blog.author.last_name}
-        a.btn.btn-raised(href='#', role='button') View details »
+    section.hero
+        .hero-content
+            h1 a space that fosters
+            h2 community | commerce | creativity | culture
+            button.btn.btn-lg.btn-gray.btn-slg Learn more
+    section.about
+        .container
+            .titlebox.mb-3
+                h3.about-title What is the union?
+            p.about-content.mb-4 The Union is an innovation hub created to foster community, commerce, creativity and culture for people of African descent in Seattle. We offer co-working space and carefully curated educational programs for all levels of people interested in pursuing careers in technology and entrepreneurship. We also provide pertinent resources for startups &amp; established businesses.
+            .row.about-images
+                .col.col-md-6
+                    img(src="/img/student-cpu@2x.png")
+                .col.col-md-6
+                    img(src="/img/tech-record-player@2x.png")
+                .col.col-12
+                    img(src="/img/group-seated@2x.png")
+            .pt-5.text-center
+                button.btn.btn-slg.btn-transparent learn more about us
+    section.separator
+        .container
+            .separator-content
+                h4 fostering community since 2015
+                p THE UNION is a nonprofit initiative of PACE, a 501(c)3 located in Washington.
+            button.btn.btn-darkgray.btn-slg become a member
+    section.benefits
+        .container
+            .titlebox.titlebox-lightblue.mb-4
+                h3 Member Benefits &amp; Facilities
+            .row
+                -
+                    var staticBenefits = [{title: "high-speed internet", description: "With high speed fiber our members enjoy internet throughout our facility. Whether working insode or our plaza you're connected.", image: "img/wifi-icon@2x.png"},
+                    {title: "free beverages", description: "We offer coffee, tea, soda and kombucha in addition to beer and wine in the afternoons. We also have spirits availble for special events.", image: "img/coffee-icon@2x.png"},
+                    {title: "Gym access", description: "Our facility has a full gym with showers and daily towel service. Take a break from work to refocus on health and welness.", image: "img/barbells-icon@2x.png"},
+                    {title: "meeting room", description: "When you need to huddle with your team we offer a video equiped meeting room with a large white board and executive seating.", image: "img/meeting-room-icon@2x.png"},
+                    {title: "conference rooms", description: "Our facility is equipped with two large multipurpose conference rooms perfect for large meetings, workshops and conferences.", image: "img/conference-icon@2x.png"},
+                    {title: "recording studio", description: "Designed for modern content creation, our recording sutdio comes equipped with all you need to record podcase, songs or edit videos.", image: "img/recording-icon@2x.png"}]
+                for benefit in staticBenefits
+                    .col-md-4.mb-4.px-4
+                        .benefits-item-title.mb-3
+                            img(src=benefit.image alt="" height="28")
+                            h5= benefit.title
+                        .benefits-item-content
+                            p= benefit.description
+            .text-center.pt-3
+                button.btn.btn-darkwhite.btn-slg explore all benefits
+    section.events
+        .container
+            .events-left
+                img(src="img/event-image.png", alt="")
+            .events-right
+                h3.events-title the union events
+                ul.events-list
+                    for event in events
+                        li
+                            a(href="#").events-list-item
+                                .titlebox.titlebox--small
+                                    h6 
+                                        span= event.month
+                                        br
+                                        =event.date
+                                div
+                                    h4.events-list-item-title= event.title
+                                    p= event.description
+                .events-button
+                    button.btn.btn-slg.btn-transparent more union events
+    section.prices
+        .container
+            .titlebox.mb-3
+                h3 Become a Member
+            p.prices-content We offer many levels of membership for entrepreveurs and creative professionals. Some of our packages and perks are listed below. Contact us to learn more about membership and schedule a tour.
+            .row
+                -
+                    var prices = [
+                        {title: 'social', subtitle: 'Great for Corporate Hustlers', access: '5PM to 9PM', price: '150.00', list: [true, true, false, false, false, false, false]}, 
+                        {title: 'standart', subtitle: 'Great for Entrepreneurs', access: '9AM to 5PM', price: '250.00', list: [true, true, true, true, false, false, false]}, 
+                        {title: 'premium', subtitle: 'Our Full Service offering', access: '24/7', price: '650.00', list: [true, true, true, true, true, true, true]}]
+                each priceitem, index in prices
+                    .col-md-4
+                        div(class=index==1?'prices-item--middle':'').prices-item
+                            .titlebox.titlebox--notop.mb-3
+                                div
+                                    h4= priceitem.title
+                                    p.mb-0= priceitem.subtitle
+                                    small
+                                        | Access 
+                                        = priceitem.access
+                            ul.prices-list
+                                each line, index in ['High-Speed Internet Access', 'Access to all events', 'meeting room credits', 'unlimited printing', 'gym access', 'shower & tower service', 'conference facilities']
+                                    li(class=priceitem.list[index] ? 'prices-list-item--checked' : 'prices-list-item--unchecked').prices-list-item
+                                        //- if 
+                                        //-     img(src="img/check-icon@2x.png" alt="" height="23")
+                                        //- else
+                                        //-     img(src="img/cross-icon@2x.png" alt="" height="23")
+                                        =line
+                            .prices-monthly
+                                span
+                                    | $ 
+                                    =priceitem.price
+                                br
+                                small Monthly
+                            .p-5
+                                button.btn.btn-slg.btn-transparent Learn More
+    section.testimonials
+        .container
+            .titlebox
+                h3 testimonials
+            .testimonials-item
+                h4.mb-3
+                    img(src="https://static1.squarespace.com/static/5376ae4fe4b095f55e73e0e7/t/5af9e16c1ae6cf77d9f1eca2/1526325616483/CityofSeattle-logo_horizontal_blue-black_print.png", alt="city of Seattle", height="35")
+                blockquote
+                    p "The Union offered an inspiring, collaborative and welcoming environment with business resources to guide people toward success. The co-working space and workshops are critical to powering entrepreneurs."
+                p
+                    | David Harris
+                    br
+                    small Startup Advocate, City of Seattle
+    section.team
+        .container
+            .titlebox.mb-4
+                h3 Our Team
+            .row
+                -var numOfItems = 4 // const for number of items in the team section. Valid numbers: 1, 2, 3, 4, 6
+                
+                each member in members
+                    div(class="col-md-" + 12/members.length)
+                        .card
+                            img(src=member.photo alt=member.name + " profile").card-img-top
+                            .card-body
+                                h4.card-title= member.name
+                                p.card-subtitle= member.description
+                                -
+                                    var socials = 
+                                        {
+                                            linkedin: 'fa-linkedin-in', 
+                                            twitter: 'fa-twitter', 
+                                            facebook: 'fa-facebook-f'
+                                        }
+                                ul.card-socials
+                                    each social, key in socials
+                                        li
+                                            a(href=member.links[key]).icon-circle
+                                                i(class=social).fab
+    section.articles
+        .container
+            .titlebox.mb-5
+                h3 Latest articles
+            .row
+                each article in articles
+                    .col-md-4
+                        .card
+                            img(src=article.thumbnail, alt="article about ..").card-img-top
+                            .card-body
+                                p.card-date=article.date
+                                h4.card-title=article.title
+                                p.card-content=article.content
+                                a(href=article.link).card-link
+                                    | Read article
+                                    img(src="/img/arrow@2x.png" alt="" height="12").ml-3

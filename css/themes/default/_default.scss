@@ -5,7 +5,7 @@
 
 .btn {
   border-radius: 0;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.11), 1px 1px 0 rgba(255, 255, 255, 0.21) inset;
+  // box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.11), 1px 1px 0 rgba(255, 255, 255, 0.21) inset;
 
   &:focus {
     outline: none;
@@ -94,3 +94,16 @@
   left: initial;
   right: 0; /* add right with 0 or a low pixel value */
 }
+
+@import './partials/titlebox';
+@import './partials/buttons';
+
+@import './sections/about';
+@import './sections/articles';
+@import './sections/benefits';
+@import './sections/events';
+@import './sections/hero';
+@import './sections/prices';
+@import './sections/separator';
+@import './sections/team';
+@import './sections/testimonials';

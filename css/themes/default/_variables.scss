@@ -7,10 +7,29 @@ $brand-warning: #ff9800;
 $brand-danger: #de4b33;
 $brand-info: #5bc0dd;
 
+$gray-200: #f4f4f4 !default;
+$gray-300: #f6f6f6 !default;
+$gray-400: #d6d6d6 !default;
+$gray-500: #8C8C8C !default;
+$gray-600: #767676 !default;
+$gray-700: #6e6e6e !default;
+$gray-800: #3c3c3c !default;
+$gray-900: #323232 !default;
+
+$blue-300: #c7d8ff;
+$blue-400: #bed2ff;
+$blue-500: #7ea5fe;
+$blue-700: #004eff;
+$blue-900: #1a1a38;
+
+
+$primary: $gray-700;
+$secondary: $gray-600;
+
 // Typography
 // -------------------------
-$font-family-base: "HelveticaNeue-CondensedBold", "Helvetica Neue", Arial, sans-serif;
-$headings-font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", Arial, sans-serif;
+$font-family-base: 'Montserrat', sans-serif;
+$headings-font-family:  'Montserrat', sans-serif;
 
 // Buttons
 // -------------------------
