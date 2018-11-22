@@ -122,8 +122,6 @@ block content
             .titlebox.mb-4
                 h3 Our Team
             .row
-                -var numOfItems = 4 // const for number of items in the team section. Valid numbers: 1, 2, 3, 4, 6
-                
                 each member in members
                     div(class="col-md-" + 12/members.length)
                         .card
@@ -143,6 +141,25 @@ block content
                                         li
                                             a(href=member.links[key]).icon-circle
                                                 i(class=social).fab
+    section.photos
+        .photos-item
+            .container
+                .row
+                    .col.col-md-6
+                        img(src="/img/group-planning@2x.png" alt="")
+                    .col.col-md-3
+                        img(src="/img/man-whiteboard@2x.png" alt="")
+                    .col.col-md-3
+                        img(src="/img/reading-news@2x.png" alt="")
+        .photos-item
+            .container
+                .row
+                    .col.col-md-3
+                        img(src="/img/women-whiteboard@2x.png" alt="")
+                    .col.col-md-3
+                        img(src="/img/hand-writing@2x.png" alt="")
+                    .col.col-md-6
+                        img(src="/img/women-networking@2x.png" alt="")
     section.articles
         .container
             .titlebox.mb-5
@@ -159,3 +176,10 @@ block content
                                 a(href=article.link).card-link
                                     | Read article
                                     img(src="/img/arrow@2x.png" alt="" height="12").ml-3
+    section.twitter-feed
+        .container
+            i.fab.fa-twitter
+            p Launching a tech startup is definitely not easy. Join our mailing list to stay up to date on our meetups, workshops, and tech talks #poweredbyPACE
+            p.username @theunionsea
+            button.btn.btn-blue.btn-capsulte Follow
+

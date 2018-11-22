@@ -8064,6 +8064,20 @@ a.text-dark:hover, a.text-dark:focus {
       font-size: 1.5rem;
       margin-bottom: 2.5rem; }
 
+.photos {
+  background-color: #8a8a8a; }
+  .photos .col {
+    height: 250px;
+    overflow: hidden;
+    padding: 0;
+    border: 3px solid white;
+    border-bottom: none;
+    border-top: none; }
+  .photos-item:first-child {
+    border-bottom: 3px solid white; }
+  .photos img {
+    max-width: 100%; }
+
 .prices {
   padding: 70px 0; }
   .prices-content {
@@ -8204,6 +8218,9 @@ a.text-dark:hover, a.text-dark:focus {
       background-color: white;
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
       cursor: pointer; }
+
+.twitter-feed {
+  background-color: black; }
 
 .testimonials {
   padding: 70px 0;
