@@ -1,0 +1,102 @@
+.footer{
+    background-color: black;
+    color: white;
+
+    &-title{
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        font-weight: 400;
+        margin-bottom: .75rem;
+    }
+
+    &-content{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 2rem;
+        
+        img{
+            max-width: 150px;
+            max-height: 150px;
+        }
+    }
+
+
+    &-navigation{
+        width: 900px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        ul{
+            list-style: none;
+            padding: 0;
+
+            li{
+                padding: 2px 0;
+
+                a{
+                    color: white;
+                    padding: 2px 0;
+                }
+            }
+        }
+    }
+
+    &-form{
+        position: relative;
+
+        input{
+            box-shadow: none;
+            border: none;
+            font-size: .95rem;
+            color: $gray-700;
+            border-radius: 0;
+            padding-right: 30px;
+
+            & + button{
+                position: absolute;
+                right: 0;
+                background-image: url('./../img/arrow@2x.png');
+                background-repeat: no-repeat;
+                background-position: 80%;
+                background-color: transparent;
+                background-size: 26px auto;
+                border: none;
+                box-shadow: none;
+                outline: none;
+                height: 48px;
+                width: 100px;
+                transform: translateY(-48px);
+
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &-list{
+            margin-top: 1rem;
+            list-style: none;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 2rem;
+
+            a{
+                margin-right: .75rem;
+            }
+        }
+    }
+
+    &-base{
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #707070;
+        padding: 1.25rem 0;
+
+        p{
+            margin-bottom: 0;
+        }
+    }
+}

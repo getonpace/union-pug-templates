@@ -1,6 +1,51 @@
-footer
-  .container.text-center
-    p.float-left Developed and #poweredbyPACE | © 2018 PACE Inc. All Rights Reserved
-    ul.float-right.list-inline
-      li.list-inline-item
-        a(href='https://getonpace.org') PACE
+footer.footer
+    .container-fluid
+        .footer-content
+            img(src="/img/union-mark@2x.png", alt="").mr-auto
+            .footer-navigation
+                .footer-list
+                    h4.footer-title About
+                    ul
+                        li
+                            a(href="#") About Us
+                        li
+                            a(href="#") Contact Us
+                        li
+                            a(href="#") Membership
+                        li
+                            a(href="#") FAQ
+                        li
+                            a(href="#") Privacy
+                .footer-list
+                    h4.footer-title Community
+                    ul
+                        li
+                            a(href="#") Members
+                        li
+                            a(href="#") Gallery
+                        li
+                            a(href="#") Pricing
+                        li
+                            a(href="#") Blog
+                        li
+                            a(href="#") Events
+                .footer-list
+                    h4.footer-title Legal
+                    ul
+                        li
+                            a(href="#") Privacy
+                        li
+                            a(href="#") Terms
+                form.footer-form
+                    h4.footer-title Subscribe to our newsletter
+                    input(type="text" placeholder="E-mail" class="form-control form-control-lg")
+                    button(type="submit")
+                    ul.footer-form-list
+                        for social in ['twitter', 'facebook', 'instagram', 'youtube', 'vimeo-v']
+                            li
+                                a(href="#")
+                                    i(class="fa-" + social).fab
+    .footer-base
+        p Developed and #poweredbyPACE. Copyright The Union 2018. All Rights Reserved.
+
+        
