@@ -37,6 +37,16 @@
         }
     }
 
+    &-darkblue{
+        $darkblue: mix(rgb(red($blue-700), green($blue-700), blue($blue-700)), black, 0.25 * 100%);
+        @include button-variant($darkblue, $darkblue);
+        border-color: white;
+
+        &:hover, &:focus{
+            border-color: white;
+        }
+    }
+
     &-darkgray{
         @include button-variant($gray-900, $gray-900);
         border-color: white;

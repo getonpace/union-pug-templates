@@ -1,4 +1,4 @@
-.navbar.navbar-light.fixed-top.navbar-expand-md
+.navbar.navbar-expand-md
   .container
     a.navbar-brand(href='/')
       img(src="/img/union-logo@2x.png", alt="")
@@ -6,12 +6,16 @@
       span.sr-only Toggle navigation
       span.navbar-toggler-icon
     .collapse.navbar-collapse
-      ul.nav.navbar-nav
-        li.nav-item(class=(title === 'Home') ? 'active' : undefined)
-          a.nav-link(href='/') Home
-        li.nav-item(class=(title === 'Contact') ? 'active' : undefined)
+      -var links = ['About', 'Facilities', 'Pricing', 'Events', 'Blog']
+      ul.nav.navbar-nav.ml-md-auto.mr-md-5
+        each link in links
+          li.nav-item(class=(title === link.toLowerCase()) ? 'active' : undefined)
+            a.nav-link(href='#')= link
+      .navbar-right
+        button.btn.btn-darkblue Login / Signup
+        //- li.nav-item(class=(title === 'Contact') ? 'active' : undefined)
           a.nav-link(href='/contact') Contact
-      ul.nav.navbar-nav.ml-auto
+      //- ul.nav.navbar-nav.ml-auto
         if !user
           li.nav-item(class=(title === 'Login') ? 'active' : undefined)
             a.nav-link(href='/login') Login
