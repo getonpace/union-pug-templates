@@ -38,8 +38,7 @@
     }
 
     &-darkblue{
-        $darkblue: mix(rgb(red($blue-700), green($blue-700), blue($blue-700)), black, 0.25 * 100%);
-        @include button-variant($darkblue, $darkblue);
+        @include button-variant($blue-800, $blue-800);
         border-color: white;
 
         &:hover, &:focus{

@@ -6,11 +6,11 @@
       span.sr-only Toggle navigation
       span.navbar-toggler-icon
     .collapse.navbar-collapse
-      -var links = ['About', 'Facilities', 'Pricing', 'Events', 'Blog']
+      -var links = [{title: 'About', section: 'about'}, {title: 'Facilities', section: 'benefits'}, {title: 'Pricing', section: 'prices'}, {title: 'Events', section: 'events'}, {title: 'Blog', section: 'articles'}]
       ul.nav.navbar-nav.ml-md-auto.mr-md-5
         each link in links
-          li.nav-item(class=(title === link.toLowerCase()) ? 'active' : undefined)
-            a.nav-link(href='#')= link
+          li.nav-item(class=(title === link.title.toLowerCase()) ? 'active' : undefined)
+            a.nav-link(href='#' data-section=link.section)= link.title
       .navbar-right
         button.btn.btn-darkblue Login / Signup
         //- li.nav-item(class=(title === 'Contact') ? 'active' : undefined)

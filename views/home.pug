@@ -91,10 +91,6 @@ block content
                             ul.prices-list
                                 each line, index in ['High-Speed Internet Access', 'Access to all events', 'meeting room credits', 'unlimited printing', 'gym access', 'shower & tower service', 'conference facilities']
                                     li(class=priceitem.list[index] ? 'prices-list-item--checked' : 'prices-list-item--unchecked').prices-list-item
-                                        //- if 
-                                        //-     img(src="img/check-icon@2x.png" alt="" height="23")
-                                        //- else
-                                        //-     img(src="img/cross-icon@2x.png" alt="" height="23")
                                         =line
                             .prices-monthly
                                 span
@@ -108,15 +104,17 @@ block content
         .container
             .titlebox
                 h3 testimonials
-            .testimonials-item
-                h4.mb-3
-                    img(src="https://static1.squarespace.com/static/5376ae4fe4b095f55e73e0e7/t/5af9e16c1ae6cf77d9f1eca2/1526325616483/CityofSeattle-logo_horizontal_blue-black_print.png", alt="city of Seattle", height="35")
-                blockquote
-                    p "The Union offered an inspiring, collaborative and welcoming environment with business resources to guide people toward success. The co-working space and workshops are critical to powering entrepreneurs."
-                p
-                    | David Harris
-                    br
-                    small Startup Advocate, City of Seattle
+            .testimonials-list.bxslider
+                each testimonial in testimonials
+                    .testimonials-item
+                        h4.mb-3
+                            img(src=testimonial.thumbnail, alt="", height="35")
+                        blockquote
+                            p= testimonial.content
+                        p
+                            = testimonial.author.name
+                            br
+                            small=testimonial.author.position
     section.team
         .container
             .titlebox.mb-4

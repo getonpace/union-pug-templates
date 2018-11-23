@@ -20,6 +20,8 @@ $blue-300: #c7d8ff;
 $blue-400: #bed2ff;
 $blue-500: #7ea5fe;
 $blue-700: #004eff;
+$blue-600: mix(rgb(red($blue-700), green($blue-700), blue($blue-700)), white, 0.5 * 100%);
+$blue-800: mix(rgb(red($blue-700), green($blue-700), blue($blue-700)), black, 0.25 * 100%);
 $blue-900: #1a1a38;
 
 
