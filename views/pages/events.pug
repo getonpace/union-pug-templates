@@ -1,0 +1,45 @@
+extends ./../layout
+
+include ./../partials/pagination
+
+block content
+    section.hero.events-hero
+        .overflow-white-bottom
+        .hero-content
+            h1 Upcoming events
+            h3 Explore our community &amp; member events
+    section.events-list
+        .container-fluid
+            .row
+                .col-md-6
+                    ul.events-list.pl-5
+                        for event in events
+                            li
+                                a(href="#").events-list-item
+                                    .titlebox.titlebox--small
+                                        h6 
+                                            span= event.month
+                                            br
+                                            =event.date
+                                    div
+                                        h4.events-list-item-title= event.title
+                                        p= event.description
+                    +pagination(Array(7))
+                .col-md-6
+                    .card
+                        img(src="http://www.dolby-gallery.com/web/wp-content/uploads/2013/03/featured-image-600x350-crank-wojcik.jpg", alt="").card-img-top
+                        .card-body
+                            .card-line
+                                h2.card-title HALLOWARE! A HALLOWEEN PARTY
+                            .card-line
+                                p.card-date
+                                    span October 17, 2016
+                                    span 09:00 PM - 02:00 AM
+                            .card-line
+                                p.card-content
+                                    | Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.
+                            .card-line
+                                ul.card-list
+                                    li Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+                                    li Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+                            button.btn.btn-slg.btn-block.btn-lightblue RSVP FOR THIS EVENT

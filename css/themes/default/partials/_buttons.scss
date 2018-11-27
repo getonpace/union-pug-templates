@@ -28,6 +28,17 @@
         }
     }
 
+    &-lightblue{
+        @include button-variant($blue-600, $blue-600);
+        
+        color: white;
+        border-color: black;
+
+        &:hover, &:focus{
+            border-color: black;
+        }
+    }
+
     &-blue{
         @include button-variant($blue-700, $blue-700);
         border-color: white;

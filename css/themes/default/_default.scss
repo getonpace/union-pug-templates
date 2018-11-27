@@ -98,6 +98,8 @@
 
 @import './partials/titlebox';
 @import './partials/buttons';
+@import './partials/overflows';
+@import './partials/pagination';
 
 @import './sections/footer';
 @import './sections/header';
@@ -114,3 +116,7 @@
 @import './sections/twitter';
 @import './sections/featured';
 @import './sections/testimonials';
+
+// pages
+
+@import './pages/events.scss';
