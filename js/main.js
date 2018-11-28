@@ -1,7 +1,8 @@
 $(document).ready(() => {
     // slider
     $('.bxslider').bxSlider({
-        auto: true
+        auto: false,
+        controls: true
     });
 
     $('.nav-link').click((e) => {

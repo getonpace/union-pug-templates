@@ -7802,18 +7802,18 @@ ul.bxslider {
 
 /* DIRECTION CONTROLS (NEXT / PREV) */
 .bx-wrapper .bx-prev {
-  left: 10px; }
+  left: -40px;
+  background: url("./../img/arrow-prev@2x.png") no-repeat;
+  background-size: 32px; }
 
 .bx-wrapper .bx-prev:hover,
 .bx-wrapper .bx-prev:focus {
   background-position: 0 0; }
 
 .bx-wrapper .bx-next {
-  right: 10px; }
-
-.bx-wrapper .bx-next:hover,
-.bx-wrapper .bx-next:focus {
-  background-position: -43px 0; }
+  right: -40px;
+  background: url("./../img/arrow-next@2x.png") no-repeat;
+  background-size: 32px; }
 
 .bx-wrapper .bx-controls-direction a {
   position: absolute;
@@ -8149,6 +8149,11 @@ ul.bxslider {
   background: linear-gradient(to top, white, transparent); }
 
 .overflow-black {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
   background: rgba(0, 0, 0, 0.3); }
 
 .pagination {
@@ -8171,6 +8176,32 @@ ul.bxslider {
       font-weight: 600;
       color: #323232;
       pointer-events: none; }
+
+.card-noborder {
+  border: none;
+  outline: none;
+  box-shadow: none; }
+
+.card-socials {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  list-style: none;
+  padding: 0;
+  width: 120px;
+  margin: auto; }
+  .card-socials > li > a {
+    width: 30px;
+    height: 30px;
+    background-color: #adadad;
+    border-radius: 50%;
+    display: block;
+    text-align: center;
+    line-height: 2;
+    color: white;
+    transition: .3s; }
+    .card-socials > li > a:hover {
+      background-color: #a0a0a0; }
 
 .footer {
   background-color: black;
@@ -8544,26 +8575,6 @@ ul.bxslider {
       font-weight: 300;
       font-size: .95rem;
       margin-bottom: 1rem; }
-    .team .card-socials {
-      display: flex;
-      justify-content: space-between;
-      align-content: center;
-      list-style: none;
-      padding: 0;
-      width: 120px;
-      margin: auto; }
-      .team .card-socials > li > a {
-        width: 30px;
-        height: 30px;
-        background-color: #adadad;
-        border-radius: 50%;
-        display: block;
-        text-align: center;
-        line-height: 2;
-        color: white;
-        transition: .3s; }
-        .team .card-socials > li > a:hover {
-          background-color: #a0a0a0; }
     .team .card:hover {
       background-color: white;
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
@@ -8664,6 +8675,44 @@ ul.bxslider {
   .events-list .card-content, .events-list .card-list {
     color: #515151;
     font-weight: 300; }
+
+.members-hero {
+  height: 400px;
+  min-height: 400px;
+  background: none; }
+  .members-hero .img-wrapper {
+    height: 400px;
+    overflow: hidden; }
+    .members-hero .img-wrapper img {
+      height: 100%;
+      width: 100%; }
+
+.members-title {
+  display: flex;
+  position: absolute;
+  justify-content: flex-start;
+  align-items: center;
+  bottom: -50px; }
+  .members-title h1 {
+    font-size: 2rem;
+    font-weight: 600; }
+  .members-title h2 {
+    font-size: 1.5rem;
+    font-weight: 300; }
+
+.members-about {
+  padding: 5rem 0 2.5rem; }
+  .members-about h3 {
+    font-size: 1.4rem; }
+  .members-about p {
+    font-weight: 300;
+    font-size: .9rem;
+    color: black; }
+  .members-about-testimony {
+    font-size: 1.2rem; }
+
+.members-list {
+  background-color: #f4f4f4; }
 
 html {
   position: relative;
