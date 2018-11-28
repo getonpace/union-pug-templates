@@ -37,6 +37,10 @@
     &-button{
         text-align: left;
         padding: 2rem 0 0 2rem;
+
+        a{
+            color: $gray-900;
+        }
     }
 
     &-list{

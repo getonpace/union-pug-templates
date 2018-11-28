@@ -59,14 +59,14 @@ block content
                             a(href="#").events-list-item
                                 .titlebox.titlebox--small
                                     h6 
-                                        span= event.month
+                                        span= moment(event.date).format("MMM")
                                         br
-                                        =event.date
+                                        =moment(event.date).format('Do YYYY')
                                 div
                                     h4.events-list-item-title= event.title
                                     p= event.description
                 .events-button
-                    button.btn.btn-slg.btn-transparent more union events
+                    a(href="/events").btn.btn-slg.btn-transparent more union events
     section.prices
         .container
             .titlebox.mb-3
@@ -144,20 +144,26 @@ block content
             .container
                 .row
                     .col.col-md-6
-                        img(src="/img/group-planning@2x.png" alt="")
+                        a(href="/img/group-planning@2x.png" data-lightbox="home-gallery")
+                            img(src="/img/group-planning@2x.png" alt="")
                     .col.col-md-3
-                        img(src="/img/man-whiteboard@2x.png" alt="")
+                        a(href="/img/man-whiteboard@2x.png" data-lightbox="home-gallery")
+                            img(src="/img/man-whiteboard@2x.png" alt="")
                     .col.col-md-3
-                        img(src="/img/reading-news@2x.png" alt="")
+                        a(href="/img/reading-news@2x.png" data-lightbox="home-gallery")                    
+                            img(src="/img/reading-news@2x.png" alt="")
         .photos-item
             .container
                 .row
                     .col.col-md-3
-                        img(src="/img/women-whiteboard@2x.png" alt="")
+                        a(href="/img/women-whiteboard@2x.png" data-lightbox="home-gallery")   
+                            img(src="/img/women-whiteboard@2x.png" alt="")
                     .col.col-md-3
-                        img(src="/img/hand-writing@2x.png" alt="")
+                        a(href="/img/hand-writing@2x.png" data-lightbox="home-gallery")   
+                            img(src="/img/hand-writing@2x.png" alt="")
                     .col.col-md-6
-                        img(src="/img/women-networking@2x.png" alt="")
+                        a(href="/img/women-networking@2x.png" data-lightbox="home-gallery")   
+                            img(src="/img/women-networking@2x.png" alt="")
     section.articles
         .container
             .titlebox.mb-5

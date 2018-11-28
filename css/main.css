@@ -8394,6 +8394,8 @@ ul.bxslider {
   .events-button {
     text-align: left;
     padding: 2rem 0 0 2rem; }
+    .events-button a {
+      color: #323232; }
   .events-list {
     list-style: none;
     padding: 0; }
