@@ -105,16 +105,7 @@ block content
             .titlebox
                 h3 testimonials
             .testimonials-list.bxslider
-                each testimonial in testimonials
-                    .testimonials-item
-                        h4.mb-3
-                            img(src=testimonial.thumbnail, alt="", height="35")
-                        blockquote
-                            p= testimonial.content
-                        p
-                            = testimonial.author.name
-                            br
-                            small=testimonial.author.position
+                +testimonialSection(testimonials)
     section.team
         .container
             .titlebox.mb-4

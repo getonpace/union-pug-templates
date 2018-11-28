@@ -1,8 +1,41 @@
 extends ./../layout
 
 block content
-    section.hero.events-hero
-        .overflow-white-bottom
-        .hero-content
-            h1 Upcoming events
-            h3 Explore our community &amp; member events
+    section.hero.about-hero
+    section.about-main
+        .container
+            .mb-5
+                h1 S.T.E.A.M. WORK MAKES THE DREAM WORK
+                h2 SCIENCE - TECHNOLOGY - ENTREPRENEURSHIP - ARTS - MEDIA
+                h3 Be part of this vibrant and growing community.
+            p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+            p Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+            ul.about-main-list
+                li
+                    span 320
+                    div
+                        span.about-main-list-title Events
+                        span.about-main-list-contents Curated
+                li
+                    span 23
+                    div
+                        span.about-main-list-title Workshops
+                        span.about-main-list-contents Given
+                li
+                    span 420
+                    div
+                        span.about-main-list-title Members
+                        span.about-main-list-contents Saved
+            p Vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+    section.about-members.team
+        .container
+            .titlebox.mb-4
+                h3 Out team
+            .bxslider
+                +teamSection(members)
+    section.testimonials
+        .container
+            .titlebox
+                h3 testimonials
+            .testimonials-list.bxslider
+                +testimonialSection(testimonials)
