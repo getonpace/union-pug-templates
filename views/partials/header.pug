@@ -20,4 +20,9 @@
                     li.nav-item
                         a.nav-link(href='/'+link.title.toLowerCase() data-section=link.section class=(title.toLowerCase() === link.title.toLowerCase()) ? 'active' : undefined)= link.title
         .navbar-right
-            button.btn.btn-gray LOGIN | SIGNUP
+            if loggedIn
+                button(style="line-height:25px").btn.btn-gray
+                    | My account
+                    img(src="/img/account-icon@2x.png" alt="" height="25").ml-3
+            else
+                button.btn.btn-gray LOGIN | SIGNUP
