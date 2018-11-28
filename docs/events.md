@@ -3,9 +3,12 @@
 ### Dependenties
 - <mark>res.locals.moment = require('moment')</mark>
 - <mark>res.locals.message = {}</mark>
+- <mark>res.locals.paginate = true;</mark>
 
 ```js
 app.get('/events', (req, res, next) => {
+    res.locals.paginate = true;
+
     res.locals.events = [{
         date: new Date('10/16/2016'),
         startTime: new Date('2016-10-16T21:00:00'),
