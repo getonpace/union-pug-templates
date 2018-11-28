@@ -8148,6 +8148,9 @@ ul.bxslider {
   height: 200px;
   background: linear-gradient(to top, white, transparent); }
 
+.overflow-black {
+  background: rgba(0, 0, 0, 0.3); }
+
 .pagination {
   justify-content: center; }
   .pagination .page-item:first-child .page-link, .pagination .page-item:last-child .page-link {
@@ -8641,12 +8644,9 @@ ul.bxslider {
     font-weight: 500;
     max-width: 300px;
     white-space: pre-wrap; }
-  .events-list .card-date span {
-    margin-right: 1.5rem;
+  .events-list .card-date {
     font-weight: 300;
     color: #323232; }
-    .events-list .card-date span:last-child {
-      margin-right: 0; }
   .events-list .card-list {
     list-style: none; }
     .events-list .card-list li {

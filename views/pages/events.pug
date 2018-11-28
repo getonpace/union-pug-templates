@@ -18,28 +18,32 @@ block content
                                 a(href="#").events-list-item
                                     .titlebox.titlebox--small
                                         h6 
-                                            span= event.month
+                                            span= moment(event.date).format("MMM")
                                             br
-                                            =event.date
+                                            =moment(event.date).format('Do YYYY')
                                     div
                                         h4.events-list-item-title= event.title
                                         p= event.description
-                    +pagination(Array(7))
-                .col-md-6
-                    .card
-                        img(src="http://www.dolby-gallery.com/web/wp-content/uploads/2013/03/featured-image-600x350-crank-wojcik.jpg", alt="").card-img-top
-                        .card-body
-                            .card-line
-                                h2.card-title HALLOWARE! A HALLOWEEN PARTY
-                            .card-line
-                                p.card-date
-                                    span October 17, 2016
-                                    span 09:00 PM - 02:00 AM
-                            .card-line
-                                p.card-content
-                                    | Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.
-                            .card-line
-                                ul.card-list
-                                    li Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
-                                    li Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
-                            button.btn.btn-slg.btn-block.btn-lightblue RSVP FOR THIS EVENT
+                    if paginate
+                        +pagination(Array(7), 4)
+                each event, i in events
+                    div(class=i == 3 ? 'd-block' : 'd-none').col-md-6
+                        .card
+                            img(src=event.thumbnail, alt="").card-img-top
+                            .card-body
+                                .card-line
+                                    h2.card-title= event.title.toUpperCase()
+                                .card-line
+                                    p.card-date
+                                        time(datetime=event.startTime).mr-4= moment(event.date).format("MMMM DD, YYYY")
+                                        span
+                                            time(datetime=event.startTime)= moment(event.startTime).format('h:mm a') 
+                                            | - 
+                                            time(datetime=event.startTime)= moment(event.endTime).format('h:mm a')
+                                .card-line
+                                    p.card-content= event.content
+                                .card-line
+                                    ul.card-list
+                                        each item in event.list
+                                            li=item
+                                button.btn.btn-slg.btn-block.btn-lightblue RSVP FOR THIS EVENT

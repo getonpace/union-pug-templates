@@ -46,15 +46,8 @@
             }
 
             &-date{
-                span{
-                    margin-right: 1.5rem;
-                    font-weight: 300;
-                    color: $gray-900;
-
-                    &:last-child{
-                        margin-right: 0;
-                    }
-                }
+                font-weight: 300;
+                color: $gray-900;
             }
 
             &-list{
