@@ -1,7 +1,6 @@
 ## Example of res.locals for gallery.pug page:
 
 ### Dependenties
-- <mark>res.locals.message = {}</mark>
 - <mark>res.locals.paginate = true;</mark>
 
 ```js

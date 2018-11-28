@@ -2,7 +2,6 @@
 
 ### Dependenties
 - <mark>res.locals._ = require('lodash')</mark>
-- <mark>res.locals.message = {}</mark>
 
 > res.locals.currentMember - index of the member, whose infomation has to be shown on a page (main info like background, bio, social links, profile and other stuff..)
 

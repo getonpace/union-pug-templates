@@ -7,17 +7,17 @@
         span.navbar-toggler-icon
         .collapse.navbar-collapse
             -
-                var links = [{title: 'About', section: 'about'},
-                {title: 'Facilities', section: 'benefits'},
-                {title: 'Pricing', section: 'prices'},
-                {title: 'Gallery', section: 'gallery'},
-                {title: 'Events', section: 'events'},
-                {title: 'Blog', section: 'articles'},
-                {title: 'Team', section: 'team'},
-                {title: 'FAQ', section: 'faq'}]
+                var links = [{title: 'About'},
+                {title: 'Facilities'},
+                {title: 'Pricing'},
+                {title: 'Gallery'},
+                {title: 'Events'},
+                {title: 'Blog'},
+                {title: 'Team'},
+                {title: 'FAQ'}]
             ul.nav.navbar-nav.ml-md-auto.mr-md-5
                 each link in links
-                    li.nav-item(class=(title === link.title.toLowerCase()) ? 'active' : undefined)
-                        a.nav-link(href='#' data-section=link.section)= link.title
+                    li.nav-item
+                        a.nav-link(href='/'+link.title.toLowerCase() data-section=link.section class=(title.toLowerCase() === link.title.toLowerCase()) ? 'active' : undefined)= link.title
         .navbar-right
             button.btn.btn-gray LOGIN | SIGNUP

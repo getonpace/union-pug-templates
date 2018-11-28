@@ -2,7 +2,6 @@
 
 ### Dependenties
 - <mark>res.locals.moment = require('moment')</mark>
-- <mark>res.locals.message = {}</mark>
 - <mark>res.locals.paginate = true;</mark>
 
 ```js
