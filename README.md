@@ -12,8 +12,8 @@ res.locals.loggedIn = true;
 ```
 
 ## Docs
-- [about.md](https://github.com/getonpace/union-pug-templates/tree/master/docs/events.md)
+- [about.md](https://github.com/getonpace/union-pug-templates/tree/master/docs/about.md)
 - [events.md](https://github.com/getonpace/union-pug-templates/tree/master/docs/events.md)
-- [faq.md](https://github.com/getonpace/union-pug-templates/tree/master/docs/events.md)
-- [gallery.md](https://github.com/getonpace/union-pug-templates/tree/master/docs/events.md)
-- [team.md](https://github.com/getonpace/union-pug-templates/tree/master/docs/events.md)
+- [faq.md](https://github.com/getonpace/union-pug-templates/tree/master/docs/faq.md)
+- [gallery.md](https://github.com/getonpace/union-pug-templates/tree/master/docs/gallery.md)
+- [team.md](https://github.com/getonpace/union-pug-templates/tree/master/docs/team.md)
