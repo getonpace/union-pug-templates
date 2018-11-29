@@ -1,0 +1,17 @@
+extends ./../layout
+
+block content
+    section.faq
+        .container
+            h1 Frequently asked questions
+            .accordion#faq_questions
+                each item, index in questions
+                    .card
+                        div(id="question_" + index).card-header
+                            h5.mb-0
+                                button(data-toggle="collapse" data-target="#collapse_"+index aria-expanded="false" aria-controls="#collapse_"+index).btn.btn-link.btn-block
+                                    =item.question
+                        div(id="collapse_"+index aria-labelledby="headingOne" data-parent="#faq_questions").collapse
+                            .card-body
+                                each p in item.answer.split('\n')
+                                    p=p
