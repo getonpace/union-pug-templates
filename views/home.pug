@@ -160,17 +160,7 @@ block content
             .titlebox.mb-5
                 h3 Latest articles
             .row
-                each article in articles
-                    .col-md-4
-                        .card
-                            img(src=article.thumbnail, alt="article about ..").card-img-top
-                            .card-body
-                                p.card-date=article.date
-                                h4.card-title=article.title
-                                p.card-content=article.content
-                                a(href=article.link).card-link
-                                    | Read article
-                                    img(src="/img/arrow@2x.png" alt="" height="12").ml-3
+                +articlesSection(articles, 3)
     section.twitter-feed
         .container
             i.fab.fa-twitter
