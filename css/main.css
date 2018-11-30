@@ -8140,6 +8140,78 @@ ul.bxslider {
   border-radius: 25px;
   padding: .25rem 1.5rem; }
 
+.btn-twitter {
+  color: #fff;
+  background-color: #1DA1F2;
+  border-color: #1DA1F2;
+  color: white; }
+  .btn-twitter:hover {
+    color: #fff;
+    background-color: #0d8ddc;
+    border-color: #0c85d0; }
+  .btn-twitter:focus, .btn-twitter.focus {
+    box-shadow: 0 0 0 0.2rem rgba(29, 161, 242, 0.5); }
+  .btn-twitter.disabled, .btn-twitter:disabled {
+    color: #fff;
+    background-color: #1DA1F2;
+    border-color: #1DA1F2; }
+  .btn-twitter:not(:disabled):not(.disabled):active, .btn-twitter:not(:disabled):not(.disabled).active,
+  .show > .btn-twitter.dropdown-toggle {
+    color: #fff;
+    background-color: #0c85d0;
+    border-color: #0b7ec4; }
+    .btn-twitter:not(:disabled):not(.disabled):active:focus, .btn-twitter:not(:disabled):not(.disabled).active:focus,
+    .show > .btn-twitter.dropdown-toggle:focus {
+      box-shadow: 0 0 0 0.2rem rgba(29, 161, 242, 0.5); }
+
+.btn-facebook {
+  color: #fff;
+  background-color: #3B5998;
+  border-color: #3B5998;
+  color: white; }
+  .btn-facebook:hover {
+    color: #fff;
+    background-color: #30497c;
+    border-color: #2d4373; }
+  .btn-facebook:focus, .btn-facebook.focus {
+    box-shadow: 0 0 0 0.2rem rgba(59, 89, 152, 0.5); }
+  .btn-facebook.disabled, .btn-facebook:disabled {
+    color: #fff;
+    background-color: #3B5998;
+    border-color: #3B5998; }
+  .btn-facebook:not(:disabled):not(.disabled):active, .btn-facebook:not(:disabled):not(.disabled).active,
+  .show > .btn-facebook.dropdown-toggle {
+    color: #fff;
+    background-color: #2d4373;
+    border-color: #293e6a; }
+    .btn-facebook:not(:disabled):not(.disabled):active:focus, .btn-facebook:not(:disabled):not(.disabled).active:focus,
+    .show > .btn-facebook.dropdown-toggle:focus {
+      box-shadow: 0 0 0 0.2rem rgba(59, 89, 152, 0.5); }
+
+.btn-google {
+  color: #fff;
+  background-color: #E04A39;
+  border-color: #E04A39;
+  color: white; }
+  .btn-google:hover {
+    color: #fff;
+    background-color: #d23321;
+    border-color: #c7301f; }
+  .btn-google:focus, .btn-google.focus {
+    box-shadow: 0 0 0 0.2rem rgba(224, 74, 57, 0.5); }
+  .btn-google.disabled, .btn-google:disabled {
+    color: #fff;
+    background-color: #E04A39;
+    border-color: #E04A39; }
+  .btn-google:not(:disabled):not(.disabled):active, .btn-google:not(:disabled):not(.disabled).active,
+  .show > .btn-google.dropdown-toggle {
+    color: #fff;
+    background-color: #c7301f;
+    border-color: #bc2e1d; }
+    .btn-google:not(:disabled):not(.disabled):active:focus, .btn-google:not(:disabled):not(.disabled).active:focus,
+    .show > .btn-google.dropdown-toggle:focus {
+      box-shadow: 0 0 0 0.2rem rgba(224, 74, 57, 0.5); }
+
 .overflow-white-bottom {
   position: absolute;
   bottom: 0;
@@ -8927,6 +8999,56 @@ ul.bxslider {
         margin-bottom: 1rem; }
       .blog-articles .col-md-6 .card-content {
         margin-bottom: 1.5rem; }
+  .blog-article .card-body {
+    padding: 1.5rem; }
+  .blog-article .card-img {
+    height: 450px;
+    overflow: hidden;
+    border-radius: 0 !important; }
+  .blog-article .card-title {
+    font-size: 2rem;
+    font-weight: 500;
+    color: black; }
+  .blog-article .card-date {
+    color: #505050;
+    font-size: .95rem;
+    font-weight: 300; }
+    .blog-article .card-date a {
+      color: black;
+      font-weight: 500; }
+  .blog-article .card-sharing {
+    margin: auto;
+    width: 530px;
+    text-align: center; }
+    .blog-article .card-sharing h4, .blog-article .card-sharing h5 {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #6e6e6e;
+      margin-bottom: 1rem; }
+    .blog-article .card-sharing ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: space-between; }
+      .blog-article .card-sharing ul li .btn {
+        border-radius: 3px;
+        padding: .4rem 1.5rem; }
+  .blog-article .card-authorbox {
+    border: 1px solid black;
+    display: flex;
+    align-items: center; }
+    .blog-article .card-authorbox h3 {
+      font-size: 1rem;
+      color: #6e6e6e;
+      font-weight: 300; }
+      .blog-article .card-authorbox h3 a {
+        color: black;
+        font-weight: 500; }
+    .blog-article .card-authorbox p {
+      font-size: .9rem;
+      color: #6e6e6e;
+      font-weight: 300;
+      margin-bottom: 0; }
 
 html {
   position: relative;
