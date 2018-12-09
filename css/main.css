@@ -8471,12 +8471,29 @@ ul.bxslider {
   .events-list {
     list-style: none;
     padding: 0; }
+    .events-list-body {
+      display: none; }
+      .events-list-body.selected {
+        display: block; }
     .events-list-item {
       display: flex;
       justify-content: flex-start;
       align-items: center;
       padding: 1rem 0;
-      transition: .3s; }
+      transition: .3s;
+      position: relative; }
+      .events-list-item.selected:before, .events-list-item.selected:after {
+        content: '';
+        position: absolute;
+        height: 15px;
+        width: 100%;
+        z-index: 0; }
+      .events-list-item.selected:before {
+        top: -15px;
+        background: linear-gradient(transparent, rgba(30, 32, 42, 0.1)); }
+      .events-list-item.selected:after {
+        bottom: -15px;
+        background: linear-gradient(rgba(30, 32, 42, 0.1), transparent); }
       .events-list-item-title {
         text-transform: uppercase;
         color: #323232; }

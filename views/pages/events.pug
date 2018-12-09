@@ -13,9 +13,9 @@ block content
             .row
                 .col-md-6
                     ul.events-list.pl-5
-                        for event in events
+                        for event, i in events
                             li
-                                a(href="#").events-list-item
+                                a(href="#", class=i == 0 ? 'selected' : '', data-event-target=i).events-list-item
                                     .titlebox.titlebox--small
                                         h6 
                                             span= moment(event.date).format("MMM")
@@ -27,7 +27,7 @@ block content
                     if paginate
                         +pagination(Array(7), 4)
                 each event, i in events
-                    div(class=i == 3 ? 'd-block' : 'd-none').col-md-6
+                    div(class=i == 0 ? 'selected' : '', data-event=i).col-md-6.events-list-body
                         .card
                             img(src=event.thumbnail, alt="").card-img-top
                             .card-body
