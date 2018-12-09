@@ -25,6 +25,11 @@
 
         img{
             max-width: 100%;
+            display: none;
+
+            &.selected{
+                display: block;
+            }
         }
     }
 
@@ -32,6 +37,19 @@
         margin-left: 5%;
         flex: 0 0 52%;
         max-width: 52%;
+
+        li .events-list-item.selected{
+            background-color: white;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            
+            &:before, &:after{
+                display: none;
+                content: none;
+            }
+        }
     }
 
     &-button{
