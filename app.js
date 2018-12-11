@@ -185,7 +185,7 @@ app.use((req, res, next) => {
     res.locals.moment = require('moment');
     res.locals._ = require('lodash');
     res.locals.messages = {};
-    res.locals.loggedIn = true;
+    res.locals.loggedIn = false;
 
     next();
 })
