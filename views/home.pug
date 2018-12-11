@@ -50,13 +50,14 @@ block content
     section.events
         .container
             .events-left
-                img(src="img/event-image.png", alt="")
+                for event, i in events
+                    img(src=event.poster, alt="", data-event=i, class=i == 0 ? 'selected' : '')
             .events-right
                 h3.events-title the union events
                 ul.events-list
-                    for event in events
+                    for event, i in events
                         li
-                            a(href="#").events-list-item
+                            a(href="#" data-event-target=i, class=i == 0 ? 'selected' : '').events-list-item
                                 .titlebox.titlebox--small
                                     h6 
                                         span= moment(event.date).format("MMM")

@@ -58,7 +58,8 @@ block content
                                     a(href=blog.author.url)=blog.author.name
 
                             //- html content
-                            p.card-content=blog.content
+                            div.card-content
+                                !=blog.content
 
                             .card-sharing.mb-5
                                 h4 Share This Article

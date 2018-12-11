@@ -82,6 +82,7 @@ for(let item of ['practice pitch session', 'halloware! a halloween party', 'inde
         description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy',
         content: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.',
         thumbnail: 'http://www.dolby-gallery.com/web/wp-content/uploads/2013/03/featured-image-600x350-crank-wojcik.jpg',
+        poster: '/img/event-image.png',
         list: ['Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis', 'Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis']
     })
 }
@@ -145,7 +146,15 @@ const articles = [{
         thumbnail: 'https://www.cbpp.org/sites/default/files/styles/crop_228x228/public/thumbnails/image/will_fischer-500x500.jpg?itok=-N194QwZ',
         name: 'Stephanie Romero',
         content: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat quis. nostrud exerci tation ullamcorper suscipit lobortis nisl'
-    }
+    },
+    content: `<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+            <img src="http://www.digitalmeetsculture.net/wp-content/uploads/2015/04/article.jpg" alt="">
+            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+            <ul><li>Feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim</li><li>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse</li><li>Autem vel eum iriure dolor in hendrerit in vulputate velit esse</li></ul>
+            <p>Vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+            <blockquote>Vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit.</blockquote>
+            <p>Dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>`
 },
 {
     title: 'How to Find Startup Co-Founders',

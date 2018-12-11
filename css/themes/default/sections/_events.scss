@@ -25,6 +25,11 @@
 
         img{
             max-width: 100%;
+            display: none;
+
+            &.selected{
+                display: block;
+            }
         }
     }
 
@@ -32,6 +37,19 @@
         margin-left: 5%;
         flex: 0 0 52%;
         max-width: 52%;
+
+        li .events-list-item.selected{
+            background-color: white;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            
+            &:before, &:after{
+                display: none;
+                content: none;
+            }
+        }
     }
 
     &-button{
@@ -47,12 +65,41 @@
         list-style: none;
         padding: 0;
 
+        &-body{
+            display: none;
+
+            &.selected{
+                display: block;
+            }
+        }
+
         &-item{
             display: flex;
             justify-content: flex-start;
             align-items: center;
             padding: 1rem 0;
             transition: .3s;
+            position: relative;
+
+            &.selected{
+                &:before, &:after{
+                    content: '';
+                    position: absolute;
+                    height: 15px;
+                    width: 100%;
+                    z-index: 0;
+                }
+
+                &:before{
+                    top: -15px;
+                    background: linear-gradient(transparent, rgba(30, 32, 42, 0.1));
+                }
+
+                &:after{
+                    bottom: -15px;
+                    background: linear-gradient(rgba(30, 32, 42, 0.1), transparent);
+                }
+            }
 
             &-title{
                 text-transform: uppercase;
