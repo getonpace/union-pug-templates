@@ -3,15 +3,15 @@ extends ./../layout
 block content
     section.contact
         .container.shadow
-            h1.mb-3 WE WOULD LOVE TO HEAR FROM YOU
+            h1 WE WOULD LOVE TO HEAR FROM YOU
             form
-                .row
+                .row.mb-4
                     .col
                         input(type="text" placeholder="Your name" class="form-control form-control-lg" id="name")
                     .col
                         input(type="email" placeholder="Your email" class="form-control form-control-lg" id="email")
-                .row
+                .row.mb-4
                     .col
                         textarea(name="message" class="form-control form-control-lg" rows="10" placeholder="Your message")
-                .text-center.mt-3
+                .text-center.mt-5
                     button(type="submit").btn.btn-slg.btn-black send message

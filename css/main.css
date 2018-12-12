@@ -8990,6 +8990,9 @@ ul.bxslider {
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 100% auto; }
+  .contact h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem; }
   .contact .container {
     padding: 2.5rem;
     text-align: center;
@@ -8998,8 +9001,7 @@ ul.bxslider {
     font-size: 1rem;
     height: calc(3.875rem + 2px);
     padding: 1.5rem 1rem;
-    border-radius: 0;
-    margin-bottom: 1rem; }
+    border-radius: 0; }
   .contact textarea.form-control-lg {
     resize: none;
     height: 300px; }
