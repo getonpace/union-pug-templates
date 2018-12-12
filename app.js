@@ -337,6 +337,18 @@ app.get('/blog/:id', (req,res,next) => {
     res.render('pages/blog/single');
 })
 
+app.get('/404', (req, res, next) => {
+    res.locals.title = 'Page cannot be found';
+
+    res.render('pages/404');
+})
+
+app.get('/contact-us', (req, res, next) => {
+    res.locals.title = 'Contact Us';
+    
+    res.render('pages/contact');
+})
+
 app.listen(3000, () => {
     console.log('Server is listening to port 3000');
 })

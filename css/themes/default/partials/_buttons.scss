@@ -86,6 +86,16 @@
         }
     }
 
+    &-black{
+        @include button-variant(black, black);
+        color: white;
+        border-color: black;
+
+        &:hover, &:focus{
+            border-color: black;
+        }
+    }
+
 
     &-capsule{
         border-radius: 25px;

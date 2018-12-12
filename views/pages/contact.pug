@@ -1,0 +1,17 @@
+extends ./../layout
+
+block content
+    section.contact
+        .container.shadow
+            h1.mb-3 WE WOULD LOVE TO HEAR FROM YOU
+            form
+                .row
+                    .col
+                        input(type="text" placeholder="Your name" class="form-control form-control-lg" id="name")
+                    .col
+                        input(type="email" placeholder="Your email" class="form-control form-control-lg" id="email")
+                .row
+                    .col
+                        textarea(name="message" class="form-control form-control-lg" rows="10" placeholder="Your message")
+                .text-center.mt-3
+                    button(type="submit").btn.btn-slg.btn-black send message

@@ -1,0 +1,28 @@
+.contact{
+    margin-top: 100px;
+    padding: 300px 0 100px;
+    background: url('./../img/map@2x.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% auto;
+
+    .container{
+        padding: 2.5rem;
+        text-align: center;
+        background-color: white;
+    }
+
+    .form-control-lg{
+        font-size: 1rem;
+        height: calc(3.875rem + 2px);
+        padding: 1.5rem 1rem;
+        border-radius: 0;
+        margin-bottom: 1rem;
+    }
+
+    textarea.form-control-lg{
+        resize: none;
+        height: 300px;
+    }
+
+}
