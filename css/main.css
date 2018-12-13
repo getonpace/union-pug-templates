@@ -9181,6 +9181,91 @@ ul.bxslider {
       font-weight: 300;
       margin-bottom: 0; }
 
+.amenities-hero {
+  min-height: 450px;
+  background-image: url("./../img/hero-amenities@2x.png");
+  background-size: auto 100%; }
+
+.amenities-main {
+  padding: 2rem 0; }
+  .amenities-main-header {
+    margin-bottom: 0; }
+    .amenities-main-header ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      align-items: center;
+      text-align: center; }
+      .amenities-main-header ul li {
+        width: 100px; }
+        .amenities-main-header ul li a {
+          color: #6e6e6e; }
+          .amenities-main-header ul li a .img-wrapper {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 2px solid #767676;
+            line-height: 4.5;
+            margin: 0 auto .75rem; }
+            .amenities-main-header ul li a .img-wrapper img {
+              width: 35px;
+              display: initial; }
+          .amenities-main-header ul li a.selected {
+            color: black; }
+            .amenities-main-header ul li a.selected .img-wrapper {
+              border-color: black; }
+          .amenities-main-header ul li a h3 {
+            font-size: 1rem;
+            color: #6e6e6e;
+            font-weight: 300;
+            text-transform: capitalize; }
+  .amenities-main-body {
+    display: none;
+    padding: 3rem;
+    background-color: #F5F5F5; }
+    .amenities-main-body.selected {
+      display: block; }
+    .amenities-main-body h2 {
+      text-transform: capitalize;
+      font-size: 2.5rem;
+      font-weight: 300;
+      color: black;
+      margin-bottom: 1.5rem; }
+    .amenities-main-body-content {
+      color: #3c3c3c;
+      font-weight: 300;
+      font-size: .95rem; }
+    .amenities-main-body ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 2rem; }
+      .amenities-main-body ul li {
+        display: flex;
+        justify-content: flex-start;
+        align-content: center;
+        padding: .75rem 0; }
+        .amenities-main-body ul li img {
+          height: 30px;
+          width: auto;
+          margin-right: 1.5rem; }
+        .amenities-main-body ul li h5 {
+          font-size: 1.1rem;
+          font-weight: 300;
+          color: #3c3c3c;
+          margin-bottom: 0;
+          line-height: 1.75; }
+    .amenities-main-body .img-wrapper {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      max-height: 400px;
+      overflow: hidden;
+      margin-bottom: 2rem; }
+      .amenities-main-body .img-wrapper img {
+        width: 100%;
+        height: auto; }
+
 html {
   position: relative;
   min-height: 100%; }

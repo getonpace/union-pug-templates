@@ -2,9 +2,44 @@ extends ./../layout
 
 block content
     section.hero.amenities-hero
+        .overflow-white-bottom
+        .hero-content
+            h1 OUR AMENITIES
+            h3 Explore our space and benefits.
     section.amenities-main
         .container
-            .mb-5
-                h1 S.T.E.A.M. WORK MAKES THE DREAM WORK
-                h2 SCIENCE - TECHNOLOGY - ENTREPRENEURSHIP - ARTS - MEDIA
-                h3 Be part of this vibrant and growing community.
+            .amenities-main-header.bx-wrapper
+                .bx-controls
+                    .bx-controls-direction
+                        a.bx-prev(href="" data-event-action="prev") Prev
+                        a.bx-next(href="" data-event-action="next") Next
+                ul
+                    for amenity, i in amenities
+                        li
+                            a(href="#", class=i == 0 ? 'selected' : '', data-event-target=i)
+                                .img-wrapper
+                                    img(src=amenity.thumbnail alt=amenity.title)
+                                h3= amenity.title
+            for amenity, i in amenities
+                div(class=i == 0 ? 'selected' : '', data-event=i).amenities-main-body
+                    .row
+                        .col-md-6
+                            h2=amenity.title
+                            .amenities-main-body-content!=amenity.content
+                            ul
+                                for item in amenity.features
+                                    li
+                                        img(src=item.icon alt="")
+                                        h5=item.text
+                            .mt-4
+                                button.btn.btn-slg.btn-transparent SCHEDULE A TOUR
+                        .col-md-6
+                            for image in amenity.images
+                                .img-wrapper
+                                    img(src=image alt="")
+    section.testimonials
+        .container
+            .titlebox
+                h3 testimonials
+            .testimonials-list.bxslider
+                +testimonialSection(testimonials)

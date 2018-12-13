@@ -2,6 +2,135 @@ const express = require('express');
 const app = express();
 const _ = require('lodash');
 
+const amenities = [
+    {
+        title: "high-speed internet",
+        description: "With high speed fiber our members enjoy internet throughout our facility. Whether working insode or our plaza you're connected.",
+        content: '<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. \n Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et</p><p>iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. \n Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt </p>',
+        thumbnail: "img/wifi-icon.svg",
+        images: ['img/hero-about@2x.png', 'img/hero-image@2x.png'],
+        features: [
+            {
+                icon: 'img/calendar-icon.svg',
+                text: 'Flexible Date and Time Usage'
+            },
+            {
+                icon: 'img/ticket-icon.svg',
+                text: 'Free Access for Private Office Membership'
+            },
+            {
+                icon: 'img/clock-icon.svg',
+                text: 'Open from 09:00 AM - 08:00 PM'
+            }
+        ]
+    },
+    {
+        title: "free beverages",
+        description: "We offer coffee, tea, soda and kombucha in addition to beer and wine in the afternoons. We also have spirits availble for special events.",
+        content: '<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. \n Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et</p><p>iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. \n Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>',
+        thumbnail: "img/coffee-icon.svg",
+        images: ['img/hero-about@2x.png', 'img/hero-image@2x.png'],
+        features: [
+            {
+                icon: 'img/calendar-icon.svg',
+                text: 'Flexible Date and Time Usage'
+            },
+            {
+                icon: 'img/ticket-icon.svg',
+                text: 'Free Access for Private Office Membership'
+            },
+            {
+                icon: 'img/clock-icon.svg',
+                text: 'Open from 09:00 AM - 08:00 PM'
+            }
+        ]
+    },
+    {
+        title: "Gym access",
+        description: "Our facility has a full gym with showers and daily towel service. Take a break from work to refocus on health and welness.",
+        content: '<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. \n Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et</p><p>iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. \n Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>',
+        thumbnail: "img/game-icon.svg",
+        images: ['img/hero-about@2x.png', 'img/hero-image@2x.png'],
+        features: [
+            {
+                icon: 'img/calendar-icon.svg',
+                text: 'Flexible Date and Time Usage'
+            },
+            {
+                icon: 'img/ticket-icon.svg',
+                text: 'Free Access for Private Office Membership'
+            },
+            {
+                icon: 'img/clock-icon.svg',
+                text: 'Open from 09:00 AM - 08:00 PM'
+            }
+        ]
+    },
+    {
+        title: "meeting room",
+        description: "Our facility is equipped with two large multipurpose conference rooms perfect for large meetings, workshops and conferences.",
+        content: '<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. \n Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et</p><p>iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. \n Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>',
+        thumbnail: "img/meeting-room-icon.svg",
+        images: ['img/hero-about@2x.png', 'img/hero-image@2x.png'],
+        features: [
+            {
+                icon: 'img/calendar-icon.svg',
+                text: 'Flexible Date and Time Usage'
+            },
+            {
+                icon: 'img/ticket-icon.svg',
+                text: 'Free Access for Private Office Membership'
+            },
+            {
+                icon: 'img/clock-icon.svg',
+                text: 'Open from 09:00 AM - 08:00 PM'
+            }
+        ]
+    },
+    {
+        title: "conference rooms",
+        description: "We offer coffee, tea, soda and kombucha in addition to beer and wine in the afternoons. We also have spirits availble for special events.",
+        content: '<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. \n Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et</p><p>iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. \n Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>',
+        thumbnail: "img/conference-icon.svg",
+        images: ['img/hero-about@2x.png', 'img/hero-image@2x.png'],
+        features: [
+            {
+                icon: 'img/calendar-icon.svg',
+                text: 'Flexible Date and Time Usage'
+            },
+            {
+                icon: 'img/ticket-icon.svg',
+                text: 'Free Access for Private Office Membership'
+            },
+            {
+                icon: 'img/clock-icon.svg',
+                text: 'Open from 09:00 AM - 08:00 PM'
+            }
+        ]
+    },
+    {
+        title: "recording studio",
+        description: "Designed for modern content creation, our recording sutdio comes equipped with all you need to record podcase, songs or edit videos.",
+        content: '<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. \n Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et</p><p>iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. \n Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>',
+        thumbnail: "img/recording-icon.svg",
+        images: ['img/hero-about@2x.png', 'img/hero-image@2x.png'],
+        features: [
+            {
+                icon: 'img/calendar-icon.svg',
+                text: 'Flexible Date and Time Usage'
+            },
+            {
+                icon: 'img/ticket-icon.svg',
+                text: 'Free Access for Private Office Membership'
+            },
+            {
+                icon: 'img/clock-icon.svg',
+                text: 'Open from 09:00 AM - 08:00 PM'
+            }
+        ]
+    }
+]
+
 const members = [{
     name: 'Arif Gursel',
     description: 'Founder & GM',
@@ -347,6 +476,15 @@ app.get('/contact-us', (req, res, next) => {
     res.locals.title = 'Contact Us';
     
     res.render('pages/contact');
+})
+
+app.get('/amenities', (req, res, next) => {
+    res.locals.title = 'Amenities';
+
+    res.locals.amenities = amenities;
+    res.locals.testimonials = testimonials;
+    
+    res.render('pages/amenities');
 })
 
 app.listen(3000, () => {

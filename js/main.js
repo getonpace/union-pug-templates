@@ -55,4 +55,46 @@ $(document).ready(() => {
 
         currentEvent = i;
     })
+
+    $('[data-event-action]').click((e) => {
+        e.preventDefault();
+
+        switch($(e.target).data('eventAction')){
+            case 'prev': {
+                let i = $('.selected[data-event]').data('event');
+
+                if(i === 0){
+                    i = 5;
+                }else{
+                    i -= 1;
+                }
+
+                $('[data-event-target]').removeClass('selected');
+                $(`[data-event-target=${i}]`).addClass('selected');
+
+                $('[data-event]').removeClass('selected');
+                $(`[data-event=${i}]`).addClass('selected');
+                break;
+            }
+            case 'next': {
+                let i = $('.selected[data-event]').data('event');
+
+                if(i === 5){
+                    i = 0;
+                }else{
+                    i += 1;
+                }
+
+                $('[data-event-target]').removeClass('selected');
+                $(`[data-event-target=${i}]`).addClass('selected');
+
+                $('[data-event]').removeClass('selected');
+                $(`[data-event=${i}]`).addClass('selected');
+                break;
+            }
+            default: {
+                console.log('Unknown event');
+            }
+        }
+    })
 })
